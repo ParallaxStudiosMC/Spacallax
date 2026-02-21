@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bg_music.wav" />
+    <None Remove="bullet_shoot.wav" />
+    <None Remove="explode.wav" />
+    <None Remove="spaceship_enemy.png" />
+    <None Remove="spaceship_player.png" />
+    <None Remove="sprite_bullet.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="bg_music.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bullet_shoot.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="explode.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="spaceship_enemy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="spaceship_player.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sprite_bullet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="p2dgfx">
+      <HintPath>..\..\p2dgfx\p2dgfx\bin\Release\net8.0-windows\p2dgfx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
